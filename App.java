@@ -1,21 +1,31 @@
-package mystudent;
+package Mystudent;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("\n Hello from class App \n\n");
 
-        // Create a student object
         Student myStudent = new Student();
+        myStudent.setFirstname("Aryan");
+        myStudent.setLastname("Dutta");
+        myStudent.setMajor("CIT");
+        myStudent.setGpa(4.0);
+        myStudent.setAge(19);
+        myStudent.setOnProbation(false);
+        myStudent.displayStudentInfo(); // Display the info of the first student
 
-        // Fill the new myStudent object's data fields
-        myStudent.firstName = "Dennis";
-        myStudent.lastname = "Mohle";
-        myStudent.gpa = 3.4;
-        myStudent.major = "Computer Science";
-        myStudent.city = "Fresno";
+        System.out.println(); // Just to add a blank line between students
 
-        System.out.println("\n The first name of the student is: " + myStudent.firstName + "\n");
-        System.out.println("\n The last name of the student is: " + myStudent.lastname + "\n");
+        Student myStudent2 = new Student();
+        myStudent2.setFirstname("Jim");
+        myStudent2.setLastname("Halpert");
+        myStudent2.setMajor("Business");
+        myStudent2.setGpa(2.3);
+        myStudent2.setAge(24);
+        myStudent2.setOnProbation(false);
+        myStudent2.displayStudentInfo(); // Display the info of the second student
+    }
 
+    @Override
+    public String toString() {
+        return "App []";
     }
 }
